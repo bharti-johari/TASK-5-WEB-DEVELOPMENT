@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleHub - Modern Fashion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>StyleHub</h1>
+                <span>Fashion Forward</span>
+            </div>
+            <nav class="nav" id="nav">
+                <a href="#home" class="nav-item active">Home</a>
+                <a href="#collection" class="nav-item">Collection</a>
+                <a href="#trending" class="nav-item">Trending</a>
+                <a href="#about" class="nav-item">About</a>
+                <a href="#contact" class="nav-item">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button class="action-btn" id="wishlist-btn">
+                    ♡ <span class="wishlist-count">0</span>
+                </button>
+                <button class="action-btn" id="bag-btn">
+                    👜 <span class="bag-count">0</span>
+                </button>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-slider">
+            <div class="slide active">
+                <div class="slide-content">
+                    <h1>Summer Collection 2024</h1>
+                    <p>Discover the latest trends in fashion</p>
+                    <button class="hero-btn" onclick="scrollToSection('#collection')">Explore Now</button>
+                </div>
+                <div class="slide-bg" style="background: linear-gradient(45deg, #ff6b6b, #4ecdc4);"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Section -->
+    <section id="collection" class="collection">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Collection</h2>
+                <p>Curated pieces for every style</p>
+            </div>
+            
+            <div class="filter-tabs">
+                <button class="tab-btn active" data-category="all">All Items</button>
+                <button class="tab-btn" data-category="dresses">Dresses</button>
+                <button class="tab-btn" data-category="tops">Tops</button>
+                <button class="tab-btn" data-category="bottoms">Bottoms</button>
+                <button class="tab-btn" data-category="accessories">Accessories</button>
+            </div>
+
+            <div class="sort-options">
+                <select id="price-sort">
+                    <option value="">Sort by Price</option>
+                    <option value="low-high">Low to High</option>
+                    <option value="high-low">High to Low</option>
+                </select>
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid">⊞</button>
+                    <button class="view-btn" data-view="list">☰</button>
+                </div>
+            </div>
+
+          <div class="products-container" id="products-container">
+    
+    <!-- Product 1 -->
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1520975918318-3b1d3a3b8d36" alt="Floral Summer Dress">
+        </div>
+        <div class="product-info">
+            <span class="product-category">Dresses</span>
+            <h3>Floral Summer Dress</h3>
+            <p>Light and breezy dress perfect for summer days</p>
+            <div class="rating">⭐ 4.5 (234 reviews)</div>
+            <div class="price">$89 <span class="old-price">$120</span></div>
+            <button class="add-to-bag">Add to Bag</button>
+        </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1614287544366-53c32bc6c46f" alt="Silk Blouse">
+        </div>
+        <div class="product-info">
+            <span class="product-category">Tops</span>
+            <h3>Silk Blouse</h3>
+            <p>Elegant silk blouse for professional occasions</p>
+            <div class="rating">⭐ 4.8 (156 reviews)</div>
+            <div class="price">$125 <span class="old-price">$160</span></div>
+            <button class="add-to-bag">Add to Bag</button>
+        </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1593032465171-8f3e4a45e143" alt="High-Waisted Jeans">
+        </div>
+        <div class="product-info">
+            <span class="product-category">Bottoms</span>
+            <h3>High-Waisted Jeans</h3>
+            <p>Classic denim with a modern fit</p>
+            <div class="rating">⭐ 4.3 (342 reviews)</div>
+            <div class="price">$78 <span class="old-price">$95</span></div>
+            <button class="add-to-bag">Add to Bag</button>
+        </div>
+    </div>
+
+    </div>
+    </section>
+
+    <!-- Trending Section -->
+    <section id="trending" class="trending">
+        <div class="container">
+            <div class="section-header">
+                <h2>Trending Now</h2>
+                <p>What everyone's talking about</p>
+            </div>
+            <div class="trending-grid" id="trending-grid"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About StyleHub</h2>
+                    <p>We believe fashion is a form of self-expression. Since 2015, we've been curating the finest pieces from emerging and established designers worldwide.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <h3>🌱 Sustainable</h3>
+                            <p>Eco-friendly materials and ethical production</p>
+                        </div>
+                        <div class="feature">
+                            <h3>🚚 Free Shipping</h3>
+                            <p>Free delivery on orders over $100</p>
+                        </div>
+                        <div class="feature">
+                            <h3>↩️ Easy Returns</h3>
+                            <p>30-day hassle-free return policy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">Fashion Studio</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <div class="contact-item">
+                        <strong>Visit Our Store</strong>
+                        <p>123 Fashion Street<br>New York, NY 10001</p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Contact Info</strong>
+                        <p>📞 +1 (555) 789-0123<br>✉️ hello@stylehub.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Store Hours</strong>
+                        <p>Mon-Sat: 10AM - 8PM<br>Sunday: 12PM - 6PM</p>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <h3>Send us a Message</h3>
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Full Name" required>
+                        <input type="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Bag Modal -->
+    <div class="modal" id="bag-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Shopping Bag</h2>
+                <button class="close-modal" id="close-bag">×</button>
+            </div>
+            <div class="bag-items" id="bag-items"></div>
+            <div class="bag-summary">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="bag-subtotal">$0.00</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span id="bag-total">$0.00</span>
+                </div>
+                <button class="checkout-btn" id="checkout">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wishlist Modal -->
+    <div class="modal" id="wishlist-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Wishlist</h2>
+                <button class="close-modal" id="close-wishlist">×</button>
+            </div>
+            <div class="wishlist-items" id="wishlist-items"></div>
+        </div>
+    </div>
+
+    <!-- Product Quick View Modal -->
+    <div class="modal" id="quickview-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content quickview-content">
+            <button class="close-modal" id="close-quickview">×</button>
+            <div id="quickview-content"></div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <span id="toast-message"></span>
+            <button id="toast-close">×</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
