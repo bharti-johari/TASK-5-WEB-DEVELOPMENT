@@ -31,7 +31,9 @@ It integrates all my learning into a **comprehensive, responsive, and performanc
 ## 📂 File Structure
 
 -index.html
+
 -style.css
+
 -script.js
 
 ---
@@ -62,10 +64,14 @@ It integrates all my learning into a **comprehensive, responsive, and performanc
 
 **Bharti Johari**
 Intern @ Apex Planet Software Pvt. Ltd.
+
 BTech CSE (AI & ML) | Sanskriti University
+
 **Web Development Enthusiast**
 
 
 ## 🚀 Live Demo
+
+[Click Here to View Project](https://bharti-johari.github.io/TASK-5-WEB-DEVELOPMENT/)
 
 
